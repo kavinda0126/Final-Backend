@@ -100,7 +100,7 @@ exports.TireStock = async (req, res) => {
 exports.deleteTires = async (req, res) => {
   const { id } = req.params;
   const Url = req.body.image;
-  await axios.delete("http://localhost:5000/Product/deleteimg", {
+  await axios.delete("https://final-itp-backend-923ae2bffe4e.herokuapp.com/Product/deleteimg", {
     data: { Url: Url }
   });
   try {

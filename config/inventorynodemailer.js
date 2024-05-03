@@ -19,7 +19,7 @@ exports.sendIMail = async (req, res) => {
   const { to, subject, text, html, orderId} = req.body;
 
   try {
-    const pdfResponse = await axios.get('http://localhost:5000/Product/generate-pdf', {
+    const pdfResponse = await axios.get('https://final-itp-backend-923ae2bffe4e.herokuapp.com/Product/generate-pdf', {
       responseType: 'arraybuffer',
       params: { orderId } 
     });
