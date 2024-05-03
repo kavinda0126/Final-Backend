@@ -88,7 +88,7 @@ exports.updateAccidentalAppointment= async (req, res) => {
 exports.deleteallwithimage= async (req, res) => {
   const { id } = req.params;
   const Url = req.body.image;
-  await axios.delete("http://localhost:5000/appointment/deleteImage", {
+  await axios.delete("https://final-itp-backend-923ae2bffe4e.herokuapp.com/appointment/deleteImage", {
     data: { Url: Url } // Pass the URL in the request body
   });
 
